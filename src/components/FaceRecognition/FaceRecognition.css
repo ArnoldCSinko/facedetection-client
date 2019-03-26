@@ -1,0 +1,18 @@
+.bounding-box {
+    position: absolute;
+    border: 1.5px rgb(202, 6, 202);
+    box-shadow: inset 0 0 0 3px rgb(202, 6, 202);
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-pack: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 100;
+    box-sizing: border-box;
+}
+
+#inputImage {
+    z-index: -1;
+}
