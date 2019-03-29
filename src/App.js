@@ -115,6 +115,7 @@ class App extends Component {
 					isSignedIn={isSignedIn}
 				/>
 				<Logo />
+
 				{route === "home" ? (
 					<div>
 						<Rank entries={user.entries} name={user.name} />
@@ -123,7 +124,7 @@ class App extends Component {
 							className="center"
 							style={{ paddingTop: "1rem" }}
 						>
-							{error ? (
+							{error.isError ? (
 								<Error
 									isError={error.isError}
 									message={error.message}

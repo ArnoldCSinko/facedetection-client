@@ -5,30 +5,39 @@ const Error = ({ isError, message, onClose }) => {
 	return isError ? (
 		<div
 			style={{
+				position: "fixed",
+				top: "50%",
+				left: "50%",
+				transform: "translate(-50%, -50%)",
 				display: "flex",
 				flexDirection: "row",
 				justifyContent: "center",
+				alignContent: "center",
 				alignItems: "center",
-				width: "200px",
+				width: "50%",
 				height: "50px",
-				alignSelf: "center",
-				justifySelf: "center"
+				zIndex: "99999"
 			}}
 		>
 			<h4
 				className="red center"
 				style={{
-					background: "black",
-					padding: "5px",
-					flex: "1"
+					background: "rgba(0,0,0, .6)",
+					flex: "1",
+					height: "50px%",
+					lineHeight: "50px",
+					alignContent: "center",
+					textAlign: "center"
 				}}
 			>
 				{message}
 			</h4>
 			<button
-				className="w-30 grow f4 link ph3 pv2 dib red bg-black"
+				className="w-30 f4 link ph3 pv2 dib red"
 				style={{
-					height: "100%"
+					height: "100%",
+					width: "50px",
+					background: "rgba(0,0,0, .6)"
 				}}
 				onClick={onClose}
 			>
