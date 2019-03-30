@@ -31,14 +31,17 @@ class Signin extends Component {
 			this.state.email !== "" &&
 			this.state.password !== ""
 		) {
-			fetch("http://localhost:3000/signin", {
-				method: "post",
-				headers: { "Content-Type": "application/json" },
-				body: JSON.stringify({
-					email: this.state.email,
-					password: this.state.password
-				})
-			})
+			fetch(
+				"https://intense-sierra-83282.herokuapp.com/signin",
+				{
+					method: "post",
+					headers: { "Content-Type": "application/json" },
+					body: JSON.stringify({
+						email: this.state.email,
+						password: this.state.password
+					})
+				}
+			)
 				.then(response => {
 					if (response.status !== 400) {
 						return response.json();

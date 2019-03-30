@@ -33,15 +33,18 @@ class Register extends Component {
 			this.state.password !== "" &&
 			this.state.name !== ""
 		) {
-			fetch("http://localhost:3000/register", {
-				method: "post",
-				headers: { "Content-Type": "application/json" },
-				body: JSON.stringify({
-					name: this.state.name,
-					email: this.state.email,
-					password: this.state.password
-				})
-			})
+			fetch(
+				"https://intense-sierra-83282.herokuapp.com/register",
+				{
+					method: "post",
+					headers: { "Content-Type": "application/json" },
+					body: JSON.stringify({
+						name: this.state.name,
+						email: this.state.email,
+						password: this.state.password
+					})
+				}
+			)
 				.then(response => {
 					if (response.status !== 400) {
 						return response.json();
